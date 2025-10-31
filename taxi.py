@@ -1,17 +1,11 @@
-print("TAXI WIEN - Fahrpreisrechner")
-print("********************************")
-print("*==============================*")
-print("*                              *")
-print("*  *****  ***  *   *  *        *")
-print("*    *   *   *  * *   *        *")
-print("*    *   *****   *    *        *")
-print("*    *   *   *  * *   *        *")
-print("*    *   *   * *   *  *        *")
-print("*                              *")
-print("* Willkommen beim Taxirechner  *")
-print("*==============================*")
-print("********************************")
-km = input("Bitte geben Sie die gefahrenen Kilometer ein: ")
-euro = 3 * float(km)
-print(f"Der Fahrpreis beträgt {euro} Euro.")
-input("Zum Beenden Enter klicken.")
+import tkinter as tk
+
+from tkinter import simpledialog
+
+
+km = simpledialog.askstring("Input", "Geben sie die KM an:")
+euro = 3.00 * float(km)
+print("Die berechnung erfolgte erfolgreich.")
+tk.messagebox.showinfo("Ergebnis", f"Die Kosten für {km} KM betragen {euro} Euro.")
+
+print("Dieses Programm ist OpenSource und ist in Editor usw. editierbar für ihr Unternehmen.")
